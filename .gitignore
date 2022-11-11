@@ -1,24 +1,47 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+function setup() {
+  createCanvas(500, 500);
+  background(255);
+  textSize(40)
+    
+   }
+  
+  function draw() {
+    
+  //background
+  fill(250,10,0);
+  rect(0,0,500,500);
+  stroke(0, 160, 0);
+  strokeWeight(20);
+    
+  //text
+  line(200, 150, 150, 100);
+  stroke(0);
+  text("Hello Autumn",125,85);
+    
+  
+  //color of pumpkin
+  fill(250, 100, 0);
+  stroke(0, 100);
+  strokeWeight(3);
+  
+  //shape of pumpkin
+  ellipse(250, 250, 300, 200);
+  ellipse(250, 250, 200, 200);
+  ellipse(250, 250, 100, 200);
+    
+  
+  //frame
+   for (let i=0; i<800;i=i+50) {
+      if( i%100==0){
+          fill(255,0,0);
+      } else if( i%50==0){
+        fill(255,165,0); 
+      }
+    ellipse(i,10,50,50);
+    ellipse(10,i,50,50);
+    ellipse(i,800,50,50);
+    ellipse(500,i,50,50);
+    }
+   
+  
+  }
